@@ -1,14 +1,14 @@
 import requests
 
 from discord import app_commands, Intents, Client, Interaction
-
+# Original by AlexFlipnote, Forked and turned into cat edition by Cherry#1911
 # This will print the information in console
 print("\n".join([
-    "Hey, welcome to the active developer badge bot.",
-    "Please enter your bot's token below to continue.",
+    "Meow!, welcome to the active developer badge cat.",
+    "Please paste your bot's token below to proceed.",
     "",
-    "Don't close this application after entering the token. "
-    "You may close it after the bot has been invited and the command has been ran."
+    "Don't close this window after entering the token! "
+    "Please close this only after the bot has been invited and the command has been ran."
 ]))
 
 
@@ -54,9 +54,9 @@ async def on_ready():
         Client ID to make sure you invite the correct bot with correct scopes.
     """
     print("\n".join([
-        f"Logged in as {client.user} (ID: {client.user.id})",
+        f"You're currently logged in as {client.user} (ID: {client.user.id})",
         "",
-        f"Use this URL to invite {client.user} to your server:",
+        f"Copy & Paste (Space Key) this URL to invite {client.user} to your server:",
         f"https://discord.com/api/oauth2/authorize?client_id={client.user.id}&scope=applications.commands%20bot"
     ]))
 
@@ -73,9 +73,9 @@ async def _init_command_response(interaction: Interaction) -> None:
 
     # Then responds in the channel with this message
     await interaction.response.send_message("\n".join([
-        f"Hi **{interaction.user}**, thank you for saying hello to me.",
+        f":cat: Meow! **{interaction.user}**, thank you for saying hello to me! :D",
         "",
-        "__**Where's my badge?**__",
+        "__**Where da heck is my super ultra epic wow insane badge?!?1/??**__",
         "Eligibility for the badge is checked by Discord in intervals, "
         "at this moment in time, 24 hours is the recommended time to wait before trying.",
         "",
@@ -83,9 +83,9 @@ async def _init_command_response(interaction: Interaction) -> None:
         "If it's already been 24 hours, you can head to "
         "https://discord.com/developers/active-developer and fill out the 'form' there.",
         "",
-        "__**Active Developer Badge Updates**__",
-        "Updates regarding the Active Developer badge can be found in the "
-        "Discord Developers server -> discord.gg/discord-developers - in the #active-dev-badge channel.",
+        "__**:cat: Thank you for using the Cat Bot!**__",
+        "discord.gg/cherri"
+        "",
     ]))
 
 
@@ -97,8 +97,8 @@ async def hello(interaction: Interaction):
 
 
 @client.tree.command()
-async def givemebadge(interaction: Interaction):
-    """ Says hello or something, but with a different name """
+async def givemecat(interaction: Interaction):
+    """ Says meow or something, but with a different name """
     # Calls the function "_init_command_response" to respond to the command
     await _init_command_response(interaction)
 
